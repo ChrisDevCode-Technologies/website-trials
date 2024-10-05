@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World's Greatest Exterminators</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Include Tailwind CSS Animations Plugin if needed -->
+    <style>
+        /* Custom styles for hamburger animation */
+        .hamburger {
+            transition: all 0.3s ease-in-out;
+        }
+        .hamburger.open .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.open .line2 {
+            opacity: 0;
+        }
+        .hamburger.open .line3 {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+<!-- Navbar -->
+<nav class="bg-green-700 p-4 text-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <a href="#">World's Greatest Exterminators</a>
+        </div>
+        <!-- Hamburger Menu Button (Visible on Small Screens) -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="hamburger flex flex-col h-6 w-8 justify-between items-center focus:outline-none" aria-label="Toggle Menu">
+                <span class="block h-0.5 w-full bg-white transition-transform duration-300 ease-in-out line1"></span>
+                <span class="block h-0.5 w-full bg-white transition-opacity duration-300 ease-in-out line2"></span>
+                <span class="block h-0.5 w-full bg-white transition-transform duration-300 ease-in-out line3"></span>
+            </button>
+        </div>
+        <!-- Navigation Links -->
+        <div class="hidden md:block">
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="hover:underline">About Us</a></li>
+                <li><a href="#services" class="hover:underline">Services</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+                <li><a href="https://twitter.com/wgexterminators?lang=en" class="hover:underline">Follow us</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Mobile Menu (Visible on Small Screens when toggled) -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <ul class="flex flex-col space-y-4 mt-4 px-4">
+            <li><a href="#about" class="hover:underline block">About Us</a></li>
+            <li><a href="#services" class="hover:underline block">Services</a></li>
+            <li><a href="#contact" class="hover:underline block">Contact</a></li>
+            <li><a href="https://twitter.com/wgexterminators?lang=en" class="hover:underline block">Follow us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-[url('https://www.example.com/pest-control-banner.jpg')] bg-cover bg-center h-96 flex items-center justify-center">
+    <div class="bg-green-800 bg-opacity-50 p-8 text-white rounded-lg animate-pulse">
+        <h1 class="text-4xl font-bold mb-4">Your #1 Pest Control Solution</h1>
+        <p class="text-lg">We inspect and remove unwanted pests from your premises quickly and safely!</p>
+    </div>
+</section>
+
+<!-- About Us -->
+<section id="about" class="py-12 bg-white text-center">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p class="text-lg leading-relaxed">
+            World's Greatest Exterminators is your trusted partner for effective and safe pest control.
+            We specialize in removing pests such as roaches, rodents, ants, and termites, ensuring your home
+            or office remains pest-free. Our team of experts is trained to handle any pest challenge with care and precision.
+        </p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-12 bg-gray-200">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-center">Our Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                <h3 class="text-xl font-bold mb-4">Building Inspection</h3>
+                <p>We inspect buildings and surrounding areas for signs of pests to ensure they remain pest-free.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                <h3 class="text-xl font-bold mb-4">Pest Removal</h3>
+                <p>Effective removal of roaches, rodents, ants, termites, and more using safe and reliable methods.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                <h3 class="text-xl font-bold mb-4">Ongoing Prevention</h3>
+                <p>We offer ongoing pest prevention services to ensure your premises remain pest-free all year round.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-12 bg-white">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-center">Contact Us</h2>
+        <form class="max-w-lg mx-auto bg-gray-100 p-8 rounded-lg shadow-lg">
+            <div class="mb-6">
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-600">Your Name</label>
+                <input type="text" id="name" class="w-full p-4 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required>
+            </div>
+            <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-600">Your Email</label>
+                <input type="email" id="email" class="w-full p-4 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required>
+            </div>
+            <div class="mb-6">
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-600">Your Message</label>
+                <textarea id="message" rows="4" class="w-full p-4 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-green-700 text-white p-4 rounded-md hover:bg-green-800 transition">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-200 py-6">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 World's Greatest Exterminators. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JavaScript for Hamburger Menu Toggle -->
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('open');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
